@@ -1,29 +1,32 @@
 import handleHook from "../Core/Hooks/hook.js"
+import Observer from "../Core/Hooks/observer.js"
 
 function Navbar() {
 
     const navbarLinks = {
-        Home: "/home",
+        Home: "/",
         Services: "/services",
         About: "/about",
         Contact: "/contact",
     }
 
     const hook = handleHook.create()
-    console.log("loaded")
-    handleHook.get(hook).then(element => {
+
+    const handleClick = (element) => {
         element.onclick = () => {
-            console.log("hi")
             document.querySelector("[responsive-ui-menu]").classList.toggle("hidden")
         };
-    })
+    }
+
+    handleHook.attach(hook, handleClick)
+
 
     return (
         `
          <nav class="bg-zinc-200 fixed w-screen drop-shadow-md">
             <div class="py-5 px-5 container mx-auto flex items-center justify-between ">
                 <div class="flex items-center">
-                    <h1 redirect="/home" class="pointer text-3xl font-semibold">Venux</h1>
+                    <h1 redirect="/" class="cursor-pointer text-3xl font-semibold">Venux</h1>
                     
                     <ul class="ml-10 item-center hidden md:flex">
                         ${Object.keys(navbarLinks).map((link, index) => (

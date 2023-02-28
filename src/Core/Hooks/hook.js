@@ -1,4 +1,4 @@
-import App from "../../App.js";
+import Observer from "./observer.js";
 
 class handleClick {
     static #instance = null;
@@ -53,7 +53,17 @@ class handleClick {
         } catch (e) {
             console.log(e)
         }
+    }
 
+    async attach(element, fn) {
+        const el = await this.get(element)
+        const observer = new Observer()
+
+        fn(el)
+        observer.onUpdate(async () => {
+          const el = await this.get(element)
+          fn(el)
+        })
     }
 
     
