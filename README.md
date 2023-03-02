@@ -23,7 +23,7 @@ To run this project on your local machine, you can clone this repository using t
 git clone https://github.com/DaYroXy/js-client-framework
 
 
-Once the repository is cloned, you can open the `index.html` file in your browser to view the website.
+Once the repository is cloned, you "important" *RUN AS LIVE SERVER* `index.html` file in your browser to view the website.
 
 ## Usage
 
