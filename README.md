@@ -46,12 +46,12 @@ Contributions to this project are welcome. If you find a bug or have a suggestio
 
 ## Images
 
-![img](https://imgur.com/SIdX7X6)
-![img](https://imgur.com/sQIcwjI)
-![img](https://imgur.com/Z4u3hMx)
-![img](https://imgur.com/gaJlouP)
-![img](https://imgur.com/4XhVPZG)
-![img](https://imgur.com/9EaWhyC)
+![img](https://imgur.com/SIdX7X6.png)
+![img](https://imgur.com/sQIcwjI.png)
+![img](https://imgur.com/Z4u3hMx.png)
+![img](https://imgur.com/gaJlouP.png)
+![img](https://imgur.com/4XhVPZG.png)
+![img](https://imgur.com/9EaWhyC.png)
 
 ## Credits
 
