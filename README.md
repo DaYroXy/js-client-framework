@@ -20,11 +20,12 @@ This project is a website that showcases various aspects of web design and devel
 
 To run this project on your local machine, you can clone this repository using the following command:
 
+```
 1. git clone https://github.com/DaYroXy/js-client-framework
 2. Open the cloned repository in your code editor of choice.
 3. Use a live server extension or run a local server on your machine to view the index.html file. We recommend using a live server extension, such as the Live Server extension for Visual Studio Code, to ensure that the website functions properly. - Website will not run if you open it noramlly, it has to be using a live server.
 4. Explore the website and experiment with the code to learn more about web design and development.
-
+```
 
 ## Usage
 
