@@ -10,7 +10,6 @@ import Contact from './components/Contact.js'
 const router = Router.getInstance();
 
 
-
 function Index() {
 
     return (

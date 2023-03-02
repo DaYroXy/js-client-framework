@@ -10,7 +10,8 @@ export default class App {
     createRoot = (element) => {
         this.DOM_ROOT = element
         
-        window.history.pushState({},"", "http://127.0.0.1:5500");
+        const origin = window.location.origin;
+        window.history.pushState({},"", origin);
         const router = Router.getInstance();
 
         router.setUrl('/');
