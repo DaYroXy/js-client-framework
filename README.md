@@ -1,4 +1,4 @@
-# Project Name
+# Venux
 
 This is a website building project created for a college course.
 
@@ -14,13 +14,13 @@ This is a website building project created for a college course.
 
 ## Description
 
-This project is a website that showcases various aspects of web design and development. It is built using HTML, CSS, and JavaScript. The website consists of multiple pages, each with a different theme and layout. Some of the pages include a portfolio page, a contact page, and a blog page. The website also includes interactive elements such as a slideshow and a navigation menu.
+This project is a website that showcases various aspects of web design and development. It is built using HTML, CSS, and JavaScript. The website is built using a framework that was created from scratch, Tailwind, AOS animation. The website contains multiple pages such as: Home, About, Services, Contact, Login, Register and much more.
 
 ## Installation
 
 To run this project on your local machine, you can clone this repository using the following command:
 
-git clone https://github.com/your-username/your-repo.git
+git clone https://github.com/DaYroXy/js-client-framework
 
 
 Once the repository is cloned, you can open the `index.html` file in your browser to view the website.
@@ -43,7 +43,7 @@ Contributions to this project are welcome. If you find a bug or have a suggestio
 
 ## Credits
 
-This project was created by [Your Name](https://github.com/your-username).
+This project was created by [Your Name](https://github.com/DaYroXy/).
 
 ## License
 
