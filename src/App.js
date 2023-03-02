@@ -34,6 +34,7 @@ export default class App {
     render = () => {
         import("./Index.js").then(Index => {
             this.DOM_ROOT.innerHTML = Index.default()
+            AOS.init();
             const events = new Events()
             events.listenForAllEvents(this.DOM_ROOT)
         })

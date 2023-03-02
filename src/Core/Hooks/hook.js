@@ -2,9 +2,7 @@ import Observer from "./observer.js";
 
 class handleClick {
     static #instance = null;
-    elementList = [
-        "data-attr-mryhvp7r"
-    ]
+    elementList = []
     // Public static method to get the singleton instance
     static getInstance() {
       if (handleClick.#instance === null) {
