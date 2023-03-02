@@ -53,6 +53,14 @@ Contributions to this project are welcome. If you find a bug or have a suggestio
 ![img](https://imgur.com/4XhVPZG.png)
 ![img](https://imgur.com/9EaWhyC.png)
 
+![img](https://imgur.com/irRtZud.png)
+![img](https://imgur.com/wVjlYrB.png)
+![img](https://imgur.com/3tmUuWW.png)
+![img](https://imgur.com/VVnMWiU.png)
+![img](https://imgur.com/MFkSqDv.png)
+![img](https://imgur.com/7atX6U3.png)
+![img](https://imgur.com/k5tMXs9.png)
+
 ## Credits
 
 This project was created by [Your Name](https://github.com/DaYroXy/).

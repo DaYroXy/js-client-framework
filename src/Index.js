@@ -15,7 +15,7 @@ function Index() {
 
     return (
         `
-            
+            <div class="overflow-x-hidden">
             ${Navbar}
                 ${router.routes(["/", "/home"], Home())}
                 ${router.routes("/register", Register())}
@@ -24,7 +24,7 @@ function Index() {
                 ${router.routes("/services", Services(true))}
                 ${router.routes("/contact", Contact(true))}
             ${Footer}
-
+            </div>
         `
     );
 }
