@@ -1,6 +1,6 @@
 # Venux
 
-This is a website building project created for a college course.
+This is a website building project created for a HackerU college.
 
 ## Table of Contents
 
