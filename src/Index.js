@@ -18,7 +18,6 @@ import User from '../api/User.js'
 const router = Router.getInstance();
 
 function Index() {
-    console.log(post.search("anas"))
     const user = new User()
     const me = user.me(localStorage.getItem('token'))
     router.bind("me", {token:localStorage.getItem('token'),...me})

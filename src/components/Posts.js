@@ -5,7 +5,6 @@ import timeAgo from "../utils/timeAgo.js"
 function Posts({me}) {
   const post = new Post()
   const posts = post.getAllPosts()
-  console.log(posts)
 
   const hook = handleHook.create()
   const hook2 = handleHook.create()

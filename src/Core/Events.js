@@ -3,7 +3,6 @@ import loader from "../utils/loader.js";
 class Events {
 
     listenForAllEvents(element) {
-        // console.log(eventsController)
         loader("src/Core/Events").then(method => {
             method.map((method) => {
                 loader(`src/Core/Events/${method}`).then(events => {

@@ -5,8 +5,6 @@ function RegisterForm() {
 
     const user = new User();
 
-    console.log(user.getAllUsers())
-
     const hook = handleHook.create()
     const hook2 = handleHook.create()
 

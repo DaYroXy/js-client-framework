@@ -38,6 +38,8 @@ class Database {
     }
 
     getRowBy(tableName, key, value) {
+        console.log(tableName)
+        console.log(this.db)
         return this.db[tableName].find(row => row[key] === value);
     }
 

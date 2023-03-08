@@ -30,7 +30,6 @@ class Router {
         if (urlPattern.test(url)) {
           // input is a valid URL
             window.history.pushState({},"", url);
-            console.log(`${url} is a valid URL.`);
         } else {
           // input is a path
           window.history.pushState({},"", `${url}`);
