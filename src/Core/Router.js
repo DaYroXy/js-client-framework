@@ -4,6 +4,7 @@ class Router {
     // Private static variable to store the singleton instance
     static #instance = null;
     app = App.getInstance();
+    bindedData = {};
   
     // Private constructor to prevent direct instantiation
     constructor() {
@@ -47,20 +48,57 @@ class Router {
 
         this.setUrl(path);
         this.app.render();
-        console.log(this.app)
+    }
+
+    bind(name, data) {
+      const bindedObject = {}
+      bindedObject[name] = data;
+      this.bindedData = {...this.bindedData, ...bindedObject}
+    }
+
+    getData(name) {
+      return this.bindedData;
     }
 
 
-    routes(path, component) {
+
+    routes(path, component, others) {
       if (!Array.isArray(path)) {
         path = [path];
       }
       const currentPath = this.getUrl();
+      
       if (path.includes(currentPath)) {
-        return component;
+        const passedData = {others:others, ...this.bindedData}
+        return component(passedData);
       } else {
         return "";
       }
+    }
+
+    guard(path, componenet, others, guardedData) {
+      if (!Array.isArray(path)) {
+        path = [path];
+      }
+
+      if(!path.includes(this.getUrl())) {
+        return "";
+      }
+
+      if(!Array.isArray(guardedData)) {
+        guardedData = [guardedData];
+      }
+
+      const r = guardedData.map((data) => {
+        if(!data || data === null || data === undefined) {
+          this.redirect("/")
+          return;
+        }
+      })
+
+      const passedData = {others:others, ...this.bindedData}
+      return componenet(passedData);
+
     }
 
 }

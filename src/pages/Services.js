@@ -2,8 +2,6 @@ import Pricing from "../components/Services/Pricing.js"
 
 function Services(asPage) {
 
-    console.log(typeof asPage === "undefined"?"":"pt-[7rem]")
-
     return (
         `
         <div class="w-full flex justify-between min-h-screen h-fit bg-zinc-200">

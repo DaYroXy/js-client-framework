@@ -41,12 +41,14 @@ class Database {
         return this.db[tableName].find(row => row[key] === value);
     }
 
-    getRowById(tableName, id) {
-        return this.db[tableName][id]
-    }
-
     createTable(tableName, table) {
         this.db[tableName] = table
+        this.saveDb()
+    }
+
+    dropTable(tableName) {
+        delete this.db[tableName]
+        this.saveDb()
     }
 
     saveDb() {
@@ -59,6 +61,16 @@ class Database {
         } else {
             this.db[tableName].push(row)
         }
+        this.saveDb()
+    }
+
+    delete(tableName, key, value) {
+        this.db[tableName] = this.db[tableName].filter(row => row[key] !== value)
+        this.saveDb()
+    }
+
+    deleteTable(tableName) {
+        this.db[tableName] = []
         this.saveDb()
     }
 

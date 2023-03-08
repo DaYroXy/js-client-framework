@@ -16,7 +16,7 @@ function Hero() {
                         </div>
                     </div>
                     <div class="w-full pb-5 md:pb-0 flex items-center justify-center">
-                        <img data-aos="fade-left" data-aos-delay="300" data-aos-duration="1000" src="https://cdn.icon-icons.com/icons2/1881/PNG/512/iconfinder-cloud-management-4341278_120575.png" alt="bg-image" />
+                        <img data-aos="fade-left" data-aos-delay="300" data-aos-duration="1000" src="/imgs/hero.png" alt="bg-image" />
                     </div>
                 </div>
             </div>

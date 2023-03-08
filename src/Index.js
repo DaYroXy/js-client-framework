@@ -7,25 +7,34 @@ import Navbar from './components/Navbar.js'
 import About from './components/About.js'
 import Footer from './components/Footer.js'
 import Contact from './components/Contact.js'
+import Calculator from './components/Calculator.js'
+import Posts from './components/Posts.js'
+
+import User from '../api/User.js'
+
 const router = Router.getInstance();
 
-
 function Index() {
+    const user = new User()
+    const me = user.me(localStorage.getItem('token'))
+    router.bind("me", {token:localStorage.getItem('token'),...me})
 
     return (
         `
             <div class="overflow-x-hidden">
-            ${Navbar}
-                ${router.routes(["/", "/home"], Home())}
-                ${router.routes("/register", Register())}
-                ${router.routes("/login", Login())}
-                ${router.routes("/about", About())}
-                ${router.routes("/services", Services(true))}
-                ${router.routes("/contact", Contact(true))}
-            ${Footer}
+                ${Navbar({me})}
+                    ${router.routes(["/", "/home"], Posts)}
+                    ${router.routes("/register", Register)}
+                    ${router.routes("/login", Login)}
+                    ${router.routes("/about", About)}
+                    ${router.routes("/services", Services, true)}
+                    ${router.routes("/contact", Contact, true)}
+                    ${router.guard("/calculator", Calculator, true, [me])}
+                ${Footer}
             </div>
         `
     );
+    // ${router.guard("/contact", Contact, true, me)}
 }
 
 export default Index
