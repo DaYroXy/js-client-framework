@@ -28,7 +28,6 @@ export default class App {
 
     // Print the DOM root
     printDomChilds = () => {
-        console.log(this.DOM_ROOT);
     }
 
     // Render Element to DOM

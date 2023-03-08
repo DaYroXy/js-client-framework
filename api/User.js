@@ -10,8 +10,6 @@ class User {
     }
     
     new(Name, Email, Password) {
-        console.log("User Created")
-
         const user = {
             name: Name,
             email: Email,
@@ -92,7 +90,6 @@ class User {
             userToken = userToken.token
         }
         
-        console.log(userToken)
         localStorage.setItem("token", userToken)
         
         return true;
