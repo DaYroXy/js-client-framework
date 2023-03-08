@@ -10,6 +10,7 @@ function Posts({me}) {
   const hook = handleHook.create()
   const hook2 = handleHook.create()
   const hook3 = handleHook.create()
+  const hook4 = handleHook.create()
 
   const deletePost = (element) => {
     if(!element) return
@@ -21,10 +22,9 @@ function Posts({me}) {
 
   }
 
-  const newPostHTML = (id, name, created_at, message, email) => {
-    console.log(email)
+  const newPostHTML = (id, name, created_at, message, email, disableAnimation) => {
     return `
-    <li data-post-id="${id}" data-aos="zoom-out" data-aos-delay="200" data-aos-duration="500" class="bg-white border drop-shadow-md rounded-xl mt-5 p-5">
+    <li data-post-id="${id}" ${!disableAnimation&&`data-aos="zoom-out" data-aos-delay="200" data-aos-duration="500"`} class="bg-white border drop-shadow-md rounded-xl mt-5 p-5">
       <div class="flex justify-between flex-col">
         <div class="mb-2 flex justify-between">
           <div>
@@ -63,8 +63,29 @@ function Posts({me}) {
     }
   }
 
+  const clearPosts = () => {
+    const posts = document.querySelector(`[${hook2}]`)
+    posts.innerHTML = ''
+  }
+
+  const searchPosts = (element) => {
+    if(!element) return
+    element.onkeyup = (e) => {
+      const query = e.target.value
+      // if(!post.search(query)) {
+        
+      // }
+      clearPosts()
+      post.search(query).map(post => {
+        const posts = document.querySelector(`[${hook2}]`)
+        posts.insertAdjacentHTML("afterbegin", newPostHTML(post.id, post.name, post.create_at, post.message, post.email, true))
+      })
+    }
+  }
+
   handleHook.attach(hook, sendPost)
   handleHook.attach(hook3, deletePost)
+  handleHook.attach(hook4, searchPosts)
 
 
   return (
@@ -72,7 +93,7 @@ function Posts({me}) {
     <div class="w-full bg-zinc-200 flex justify-between  h-fit">
         <div class="container px-2 w-full mx-auto py-[10rem]">
             <div class="max-w-[650px] mx-auto">
-                <div class="flex drop-shadow-md bg-white p-1 rounded-xl">
+                <div ${hook4} class="flex drop-shadow-md bg-white p-1 rounded-xl">
                   <input type="text" class="w-full outline-none p-2" placeholder="Search for a post" />
                   <button class="w-[100px] bg-indigo-400 text-white rounded-xl px-5 p-2">Search</button>
                 </div>

@@ -51,7 +51,7 @@ class User {
         const {password, ...me} = this.getUserByEmail(user.user_email)
         return me
     }
-
+    
     logout(token) {
         let me = this.me(token)
         localStorage.removeItem("token")

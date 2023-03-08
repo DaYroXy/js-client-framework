@@ -48,6 +48,19 @@ class Post {
         throw new Error("You are not the owner of this post.")
 
     }
+
+    search(query) {
+        const posts = database.getTable("posts");
+        const filteredPosts = posts.filter(post => post.id !== undefined);
+        return filteredPosts
+          .map(post => {
+            const user = new User();
+            const me = user.getUserByEmail(post.email);
+            return {...post, name: me.name };
+          })
+          .filter(post => post.message.toLowerCase().includes(query.toLowerCase()))
+          .sort((a, b) => new Date(b.created_at) - new Date(a.created_at)); // sort by created_at in descending order
+    }
     
     getAllPosts() {
         const posts = database.getTable("posts");
