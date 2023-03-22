@@ -65,7 +65,7 @@ Contributions to this project are welcome. If you find a bug or have a suggestio
 
 ## Credits
 
-This project was created by [Your Name](https://github.com/DaYroXy/).
+This project was created by [DaYroXy](https://github.com/DaYroXy/).
 
 ## License
 
